@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="addhix-logo.png">
+    <title>Refund Calculator </title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3BVBVX4NY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D3BVBVX4NY');
+</script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="select-container">
+                
+          <select name="" class="select-box"  onchange="redirectToPage(this)">
+            <optgroup label="Calculator Options">
+           <option value="Refund Calculator" selected> Refund Calculator</option>
+           <option value="Warranty Calculator">Warranty Calculator</option>
+        </optgroup>
+         </a> 
+          </select>  
+        </div>
+            <form id="form-section">
+                <ul>
+                    <li>
+                        <label for="total-amount">Total Amount Paid </label>
+                        <input type="number" name="total-amount" id="total-amount" step="any" required> 
+                    </li>
+                    <li>
+                        <label for="shipping-fees">Shipping Fees <span>(if applicable)</span> </label>
+                        <input type="number" name="shipping-fees" id="shipping-fees" step="any" required> 
+                    </li>
+                    
+                    <li>
+                        <label for="other-deductables">Other Deductables <span>(if applicable)</span></label>
+                        <input type="number" name="other-deductables" id="other-deductables" step="any" value="" required> 
+                    </li>
+                    
+                </ul>
+                <button type="submit" id="submit">Submit</button>
+                <!-- You would have to use JavaScript to disable the clear button until either a calculation has been done or a result is returned. -->
+                <a href="Refund.html"> 
+                    <button id="clear-form">Clear</button>
+                </a>
+                <p id="result"></p>
+                <p id="errorMsg"> </p>
+            </form> 
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© <span class="author">George-Michael Kondoun</span></p>
+        </div>
+    </footer>
+</body>
+<script src="alert.js"></script>
+</html>
